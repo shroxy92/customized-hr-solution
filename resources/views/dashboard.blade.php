@@ -57,6 +57,7 @@
             <a href="#" onclick="loadModule('leave')">Leave</a>
             <a href="#" onclick="loadModule('attendance')">Attendance</a>
             <a href="#" onclick="loadModule('salary')">Claim</a>
+            <a href="#" onclick="loadModule('approval')">Approval</a>
             <a href="#" onclick="loadModule('employees')">Employees</a>
             <a href="#" onclick="loadModule('settings')">Settings</a>
         </div>
@@ -162,6 +163,37 @@
             </div>
           </div>
         </div>`;
+        } else if (module === "approval") {
+            content.innerHTML = `
+        <h4>Leave Approval Dashboard</h4>
+        <table class="table mt-3">
+          <thead>
+            <tr>
+              <th>Employee</th>
+              <th>Type</th>
+              <th>From</th>
+              <th>To</th>
+              <th>Days</th>
+              <th>Reason</th>
+              <th>Actions</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>John Doe</td>
+              <td>Sick Leave</td>
+              <td>2025-06-20</td>
+              <td>2025-06-22</td>
+              <td>03</td>
+              <td>Fever and rest</td>
+              <td>
+                <button class="btn btn-success btn-sm">Approve</button>
+                <button class="btn btn-danger btn-sm">Reject</button>
+              </td>
+            </tr>
+            <!-- Repeat for more entries -->
+          </tbody>
+        </table>`;
         } else {
             content.innerHTML = `
         <h4>Dashboard Overview</h4>
